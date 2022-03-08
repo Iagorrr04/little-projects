@@ -4,6 +4,61 @@
 #define MAXSIZE 120
 #define ballonWidth 40
 
+/*====================================================================================================*/
+void topMargin();
+void bottomMargin();
+void sapaceLoop(int spaceTotal);
+void speach(char string[MAXSIZE], int stringSize);
+void cowbow(int state);
+void cowsay(char string[MAXSIZE], int state);
+/*====================================================================================================*/
+int main(){
+
+    // Declaring.
+    char output[112];
+    char input[200];
+    int i;
+    int outputSize;
+    int done;
+    // Receiving the cow text.
+    do{
+        printf("\nMuuuuu -");
+        fflush(stdin);
+        fgets(input, 200, stdin);
+        input[strlen(input)-1] = '\0';
+
+        // Filtering string.
+        outputSize = -1;
+        done=0;
+        for(i = 0; i < strlen(input); i++){
+            if((input[i] == '"') && (outputSize == -1)){
+                outputSize++;
+            }
+            else if((input[i] == '"') && (outputSize != -1)){
+                outputSize++;
+                output[outputSize] = '\0';
+                done = 1;
+            }
+
+            if((outputSize >= 0)&&(input[i]!= '"')){
+                output[outputSize] = input[i];
+                outputSize++;
+            }
+        }
+
+        if((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0)){
+            printf("\nThe input is invalid.");
+        }
+
+    }while((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0));
+    // COWSAY !.
+    int state = 0;
+    cowsay(output, state);
+
+    return 0;
+}
+/*====================================================================================================*/
+// Function to set the top margin of the balloon.
 void topMargin(){
     int i;
     printf("  ");
@@ -13,6 +68,7 @@ void topMargin(){
     printf("\n");
 }    
 
+// Function to set the bottom margin of the ballon.
 void bottomMargin(){
     int i;
     printf("  ");
@@ -21,6 +77,7 @@ void bottomMargin(){
     }
 }
 
+// Horizontal  loop for print as much spaces are necessary.
 void spaceLoop(int spaceTotal){
     int i;
     for(i = 0; i < spaceTotal; i++){
@@ -28,6 +85,7 @@ void spaceLoop(int spaceTotal){
     }
 }
 
+// Function to configure the size of the balloon.
 void speach(char string[MAXSIZE], int stringSize){
     if(stringSize <= ballonWidth){ // Considering that will not take more than one line. 
         printf("< ");
@@ -139,6 +197,7 @@ void cowbody(int state){
     printf("\n");
 }
 
+// Function to put together the other ones.
 void cowsay(char string[MAXSIZE], int state){
     int stringSize = strlen(string);
 
@@ -150,44 +209,5 @@ void cowsay(char string[MAXSIZE], int state){
     bottomMargin();
 
     cowbody(state);
-
-    
 }
-
-int main(){
-
-    // Declaring.
-    char output[112];
-    char input[200];
-    int i;
-    int outputSize;
-    // Receiving the cow text.
-    do{
-        printf("\nMuuuuu -");
-        fflush(stdin);
-        fgets(input, 200, stdin);
-        input[strlen(input)-1] = '\0';
-
-        // Filtering string.
-        outputSize = -1;
-        for(i = 0; i < strlen(input); i++){
-            if((input[i] == '"') && (outputSize == -1)){
-                outputSize++;
-            }
-            else if((input[i] == '"') && (outputSize != -1)){
-                outputSize++;
-                output[outputSize] = '\0';
-            }
-
-            if((outputSize >= 0)&&(input[i]!= '"')){
-                output[outputSize] = input[i];
-                outputSize++;
-            }
-        }
-    }while(strlen(output) > 120);
-    // COWSAY !.
-    int state = 0;
-    cowsay(output, state);
-
-    return 0;
-}
+/*====================================================================================================*/
