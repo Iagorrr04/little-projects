@@ -19,7 +19,6 @@ void bottomMargin(){
     for(i = 0; i < ballonWidth; i++){
         printf("-");
     }
-    printf("\n");
 }
 
 void spaceLoop(int spaceTotal){
@@ -129,6 +128,16 @@ void speach(char string[MAXSIZE], int stringSize){
     }
 }
 
+// Function only to print the cow body.
+void cowbody(){
+    printf("\n        \\   ^__^");
+    printf("\n         \\  (oo)\\_______");
+    printf("\n            (__)\\       )\\/\\");
+    printf("\n                 ||----w |");
+    printf("\n                 ||     ||");
+    printf("\n");
+}
+
 void cowsay(char string[MAXSIZE]){
     int stringSize = strlen(string);
 
@@ -138,6 +147,8 @@ void cowsay(char string[MAXSIZE]){
     speach(string, stringSize);
 
     bottomMargin();
+
+    cowbody();
 
     
 }
