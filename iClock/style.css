@@ -1,40 +1,26 @@
 /*Changing the background color and setting the font color to white.*/
-.iClock
-{
-    /*
+
+.container{
+    margin: auto;
+    margin-top: 10%;
     text-align: center;
-    margin-top: 150px;
-    */
-    
+}
+
+.iClock{
     /* Better way to align, is more dinamic*/
-    position: absolute;
-    top: 45%;
-    margin-top: 10px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     color: white;
-    /* border: 1px solid #ccc; */
-    padding: 0px 5px 0px 5px;
     font-family: 'Fredoka', sans-serif;
-    font-size: 140px;
-   
-    
+    font-size: 140px;   
 }
 
-
-.iDate
-{
+.iDate{
     color: white;
-    /* position: absolute; */
     font-size: 40px;
-    margin-top: 360px;
-    text-align: center;
     font-family: 'Fredoka', sans-serif;
 }
-/* radial background */
 
+/* radial background */
 html{
-    /* background: #09060f;  */
     /*                                 H   W   form      position */
     background-image: radial-gradient(50% 50% ellipse at center , #222122 15%, #121016 100%);
     background-attachment: fixed;
