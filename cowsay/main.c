@@ -129,16 +129,17 @@ void speach(char string[MAXSIZE], int stringSize){
 }
 
 // Function only to print the cow body.
-void cowbody(){
+void cowbody(int state){
+    char eyes[8] = "o$@*-0.\0";
     printf("\n        \\   ^__^");
-    printf("\n         \\  (oo)\\_______");
+    printf("\n         \\  (%c%c)\\_______", eyes[state], eyes[state]);
     printf("\n            (__)\\       )\\/\\");
     printf("\n                 ||----w |");
     printf("\n                 ||     ||");
     printf("\n");
 }
 
-void cowsay(char string[MAXSIZE]){
+void cowsay(char string[MAXSIZE], int state){
     int stringSize = strlen(string);
 
     printf("\n");
@@ -148,7 +149,7 @@ void cowsay(char string[MAXSIZE]){
 
     bottomMargin();
 
-    cowbody();
+    cowbody(state);
 
     
 }
@@ -156,17 +157,37 @@ void cowsay(char string[MAXSIZE]){
 int main(){
 
     // Declaring.
-    char string[430];
-
+    char output[112];
+    char input[200];
+    int i;
+    int outputSize;
     // Receiving the cow text.
-    printf("\nEnter the cow text: ");
-    fflush(stdin);
-    fgets(string, 429, stdin);
-    string[strlen(string)-1] = '\0';
+    do{
+        printf("\nMuuuuu -");
+        fflush(stdin);
+        fgets(input, 200, stdin);
+        input[strlen(input)-1] = '\0';
 
+        // Filtering string.
+        outputSize = -1;
+        for(i = 0; i < strlen(input); i++){
+            if((input[i] == '"') && (outputSize == -1)){
+                outputSize++;
+            }
+            else if((input[i] == '"') && (outputSize != -1)){
+                outputSize++;
+                output[outputSize] = '\0';
+            }
 
+            if((outputSize >= 0)&&(input[i]!= '"')){
+                output[outputSize] = input[i];
+                outputSize++;
+            }
+        }
+    }while(strlen(output) > 120);
     // COWSAY !.
-    cowsay(string);
+    int state = 0;
+    cowsay(output, state);
 
     return 0;
 }
