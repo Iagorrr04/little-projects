@@ -20,6 +20,8 @@ int main(){
     int i;
     int outputSize;
     int done;
+    int parameter;
+    int state = 0;
     // Receiving the cow text.
     do{
         printf("\nMuuuuu -");
@@ -30,7 +32,9 @@ int main(){
         // Filtering string.
         outputSize = -1;
         done=0;
+        parameter = 0;
         for(i = 0; i < strlen(input); i++){
+            // Output general.
             if((input[i] == '"') && (outputSize == -1)){
                 outputSize++;
             }
@@ -44,6 +48,41 @@ int main(){
                 output[outputSize] = input[i];
                 outputSize++;
             }
+
+            // Parameters.
+            if((input[i]=='-')&&(outputSize == -1) && (parameter==0)){// Next character will be a parameter.
+                parameter = 1;
+            }
+            else if(parameter == 1){// What to do with the parameter.
+
+                if (input[i] == 'b'){
+                    state = 7;
+                }
+                else if (input[i] == 'd'){
+                    state = 8;
+                }
+                else if (input[i] == 'g'){
+                    state = 9;
+                }
+                else if (input[i] == 'p'){
+                    state = 2;
+                }
+                else if (input[i] == 's'){
+                    state = 3;
+                }
+                else if(input[i] == 't'){
+                    state = 4;
+                }
+                else if (input[i] == 'w'){
+                    state = 5;
+                }
+                else if (input[i] == 'y'){
+                    state = 6;   
+                }
+
+                parameter = 0;
+            }
+
         }
 
         if((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0)){
@@ -51,8 +90,8 @@ int main(){
         }
 
     }while((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0));
+
     // COWSAY !.
-    int state = 0;
     cowsay(output, state);
 
     return 0;
@@ -111,7 +150,7 @@ void speach(char string[MAXSIZE], int stringSize){
         int thirdBreak=-1;
         int lastSpace=-1;
         for (int i = 0; i < stringSize; i++){
-            if(string[i] == " "){// Position of the last space found.
+            if(string[i] == ' '){// Position of the last space found.
                 lastSpace = i;
             }
 
@@ -188,7 +227,7 @@ void speach(char string[MAXSIZE], int stringSize){
 
 // Function only to print the cow body.
 void cowbody(int state){
-    char eyes[8] = "o$@*-0.\0";
+    char eyes[] = "o$@*-0.=X$\0";
     printf("\n        \\   ^__^");
     printf("\n         \\  (%c%c)\\_______", eyes[state], eyes[state]);
     printf("\n            (__)\\       )\\/\\");
