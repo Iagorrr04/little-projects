@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin conversor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full"></div>
+
+    <div class="container">
+
+        <h1 class="page-title"> Coin Converter </h1>
+
+        <p class="page-subtitle">
+            Find the value of a given coin
+        </p>
+    
+        <!-- Input value -->
+        <label for="value" class="inputText">Insert the original value : </label>
+        <input type="number" id="value" size="2" placeholder="$" min="0"/>
+        <br>
+
+        <!-- Conversion rate -->
+        <label for="conversion" class="inputText">Insert the conversion rate : </label>
+        <input id="conversionRate" type="number" size="2" placeholder="-" min="0"></input>
+        <br>
+
+        <p class="resultText">
+            Conversion
+        </p>
+        <div id="resultBox"></div>
+        <br>
+
+        <!-- <button type="submit" onclick="convert()">convert</button> -->
+    </div>
+
+      
+    <script src="script.js"></script>
+</body>
+</html>
