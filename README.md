@@ -4,9 +4,9 @@
 </div>
 
 <p align="center">
-    A repo to use as a mini portfolio, of some, little projects, exercises, and other stuff.
+    A repo to use as a mini portfolio, too simple projects that don't deserve their own repo, but cool enough to be shared. <i>(maybe not)</i>
     <br>
-    Any suggestion or improving is welcome !
+    Any suggestion is welcome !
 </p>
 
 ---
