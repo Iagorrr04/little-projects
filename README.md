@@ -11,7 +11,7 @@
 
 ---
 
-## iClock
+## iClock 03.10.2022
 - A minimalist clock, getting started with JS.
 
 <div align="center" width=100%>
