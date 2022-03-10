@@ -83,28 +83,28 @@ bool inputManipulation(Input *inputValues){
         }
         else if(parameterChar == true){
             if(inputValues->fullInput[i] == 'b'){
-                inputValues->state = 7;
+                inputValues->state = 1;
             }
             else if(inputValues->fullInput[i] == 'd'){
-                inputValues->state = 8;
-            }
-            else if(inputValues->fullInput[i] == 'g'){
-                inputValues->state = 9;
-            }
-            else if(inputValues->fullInput[i] == 'p'){
                 inputValues->state = 2;
             }
-            else if(inputValues->fullInput[i] == 's'){
+            else if(inputValues->fullInput[i] == 'g'){
                 inputValues->state = 3;
             }
-            else if(inputValues->fullInput[i] == 't'){
+            else if(inputValues->fullInput[i] == 'p'){
                 inputValues->state = 4;
             }
-            else if(inputValues->fullInput[i] == 'w'){
+            else if(inputValues->fullInput[i] == 's'){
                 inputValues->state = 5;
             }
-            else if(inputValues->fullInput[i] == 'y'){
+            else if(inputValues->fullInput[i] == 't'){
                 inputValues->state = 6;
+            }
+            else if(inputValues->fullInput[i] == 'w'){
+                inputValues->state = 7;
+            }
+            else if(inputValues->fullInput[i] == 'y'){
+                inputValues->state = 8;
             }
             else{
                 printf("\nW: The given parameter is invalid. Neutral will be used.");
@@ -240,7 +240,7 @@ void speach(char string[MAXTextSize], int stringSize){
 
 // Function only to print the cow body.
 void cowbody(int state){
-    char eyes[] = "o$@*-0.=X$\0";
+    char eyes[] = "o=X$@*-0.\0";
     printf("\n        \\   ^__^");
     printf("\n         \\  (%c%c)\\_______", eyes[state], eyes[state]);
     printf("\n            (__)\\       )\\/\\");
