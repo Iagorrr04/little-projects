@@ -1,102 +1,127 @@
+/*====================================================================================================*/
+
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 
-#define MAXSIZE 120
+#define MAXFullInput 200
+#define MAXTextSize 120
 #define ballonWidth 40
+#define MAXParameterSize 20
+
+struct input{
+    char fullInput[MAXFullInput];
+    char parameter[MAXParameterSize];
+    char text[MAXTextSize];
+    int state;
+};
+typedef struct input Input;
 
 /*====================================================================================================*/
+
 void topMargin();
 void bottomMargin();
 void sapaceLoop(int spaceTotal);
-void speach(char string[MAXSIZE], int stringSize);
+void speach(char string[MAXTextSize], int stringSize);
 void cowbow(int state);
-void cowsay(char string[MAXSIZE], int state);
+void cowsay(char string[MAXTextSize], int state);
+
+bool inputManipulation(Input *inputValues);
+
 /*====================================================================================================*/
 int main(){
 
     // Declaring.
-    char output[112];
-    char input[200];
-    int i;
-    int outputSize;
-    int done;
-    int parameter;
-    int state = 0;
+    Input mainInput;
+
     // Receiving the cow text.
-    do{
-        printf("\nMuuuuu -");
+    bool valid = false;
+    while(!valid){
+        printf("Muuuuu - ");
         fflush(stdin);
-        fgets(input, 200, stdin);
-        input[strlen(input)-1] = '\0';
-
-        // Filtering string.
-        outputSize = -1;
-        done=0;
-        parameter = 0;
-        for(i = 0; i < strlen(input); i++){
-            // Output general.
-            if((input[i] == '"') && (outputSize == -1)){
-                outputSize++;
-            }
-            else if((input[i] == '"') && (outputSize != -1)){
-                outputSize++;
-                output[outputSize] = '\0';
-                done = 1;
-            }
-
-            if((outputSize >= 0)&&(input[i]!= '"')){
-                output[outputSize] = input[i];
-                outputSize++;
-            }
-
-            // Parameters.
-            if((input[i]=='-')&&(outputSize == -1) && (parameter==0)){// Next character will be a parameter.
-                parameter = 1;
-            }
-            else if(parameter == 1){// What to do with the parameter.
-
-                if (input[i] == 'b'){
-                    state = 7;
-                }
-                else if (input[i] == 'd'){
-                    state = 8;
-                }
-                else if (input[i] == 'g'){
-                    state = 9;
-                }
-                else if (input[i] == 'p'){
-                    state = 2;
-                }
-                else if (input[i] == 's'){
-                    state = 3;
-                }
-                else if(input[i] == 't'){
-                    state = 4;
-                }
-                else if (input[i] == 'w'){
-                    state = 5;
-                }
-                else if (input[i] == 'y'){
-                    state = 6;   
-                }
-
-                parameter = 0;
-            }
-
-        }
-
-        if((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0)){
-            printf("\nThe input is invalid.");
-        }
-
-    }while((outputSize>MAXSIZE)||(outputSize <= 0)||(done==0));
-
+        fgets(mainInput.fullInput, 200, stdin);
+        mainInput.fullInput[strlen(mainInput.fullInput)-1] = '\0';
+        valid = inputManipulation(&mainInput);
+        printf("\n");
+    }
     // COWSAY !.
-    cowsay(output, state);
+    cowsay(mainInput.text, mainInput.state);
 
     return 0;
 }
 /*====================================================================================================*/
+// Function to set the values of the the main input.
+bool inputManipulation(Input *inputValues){
+    int textSize = -1;
+    int i;
+    inputValues->state = 0;
+
+    bool textClosed = false;
+    bool parameterChar = false;
+    for(i = 0; i < strlen(inputValues->fullInput); i++){
+
+        // Output text.
+        if((inputValues->fullInput[i] == '"') && (textSize == -1)){// Opening output text.
+            textSize++;
+            textClosed = false;
+        }
+        else if ((inputValues->fullInput[i] == '"') && (textSize != -1)){// Closing output text.
+            textSize++;
+            inputValues->text[textSize] = '\0';
+            textClosed = true;
+        }
+
+        if((textSize >= 0) && (inputValues->fullInput[i] != '"')){// Output text content.
+            inputValues->text[textSize] = inputValues->fullInput[i];
+            textSize++;
+        }
+
+
+        // Parameters stuff.
+        if((inputValues->fullInput[i] == '-') && (textSize == -1) && (parameterChar == false)){// Next character should be the parameter character.
+            parameterChar = true;
+        }
+        else if(parameterChar == true){
+            if(inputValues->fullInput[i] == 'b'){
+                inputValues->state = 7;
+            }
+            else if(inputValues->fullInput[i] == 'd'){
+                inputValues->state = 8;
+            }
+            else if(inputValues->fullInput[i] == 'g'){
+                inputValues->state = 9;
+            }
+            else if(inputValues->fullInput[i] == 'p'){
+                inputValues->state = 2;
+            }
+            else if(inputValues->fullInput[i] == 's'){
+                inputValues->state = 3;
+            }
+            else if(inputValues->fullInput[i] == 't'){
+                inputValues->state = 4;
+            }
+            else if(inputValues->fullInput[i] == 'w'){
+                inputValues->state = 5;
+            }
+            else if(inputValues->fullInput[i] == 'y'){
+                inputValues->state = 6;
+            }
+            else{
+                printf("\nW: The given parameter is invalid. Neutral will be used.");
+            }
+            parameterChar = false;
+        }
+
+    }
+
+    if((textSize > MAXTextSize) || (textSize <= 0) || (textClosed == false)){
+            printf("\nE: Invalid text output.");
+            return false;
+        }
+
+    return true;
+}
+
 // Function to set the top margin of the balloon.
 void topMargin(){
     int i;
@@ -125,13 +150,12 @@ void spaceLoop(int spaceTotal){
 }
 
 // Function to configure the size of the balloon.
-void speach(char string[MAXSIZE], int stringSize){
+void speach(char string[MAXTextSize], int stringSize){
     if(stringSize <= ballonWidth){ // Considering that will not take more than one line. 
         printf("< ");
 
         printf("%s", string);
         // Rest of the line.
-        int i;
         spaceLoop(ballonWidth-stringSize);
         printf(" >\n");
     }
@@ -147,7 +171,6 @@ void speach(char string[MAXSIZE], int stringSize){
         // Mapping spaces.
         int firstBreak=-1;
         int secondBreak=-1;
-        int thirdBreak=-1;
         int lastSpace=-1;
         for (int i = 0; i < stringSize; i++){
             if(string[i] == ' '){// Position of the last space found.
@@ -170,16 +193,6 @@ void speach(char string[MAXSIZE], int stringSize){
                 }
                 else{
                     secondBreak = lastSpace;
-                    lastSpace = -1;
-                }
-            }
-
-            if(i == 139){
-                if(lastSpace == -1){
-                    thirdBreak = lastSpace;
-                }
-                else{
-                    thirdBreak = lastSpace;
                     lastSpace = -1;
                 }
             }
@@ -237,7 +250,7 @@ void cowbody(int state){
 }
 
 // Function to put together the other ones.
-void cowsay(char string[MAXSIZE], int state){
+void cowsay(char string[MAXTextSize], int state){
     int stringSize = strlen(string);
 
     printf("\n");
