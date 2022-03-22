@@ -22,7 +22,7 @@
 
 ---
 
-## iFlix
+## iPoster
 - A simple image viewer where you can add new images throught the input box.
 
 <div align="center" width=100%>
