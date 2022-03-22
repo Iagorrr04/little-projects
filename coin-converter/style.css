@@ -70,16 +70,12 @@ body {
     width: 193px;
     height: 31px;
 
-    border-bottom: grey;
-    border-right: grey;
-    border-top: white;
-    border-left: white;
-
-    background-color: white;
-    border-radius: 4px;
-    border-style: solid;
-
-    text-align: center;
+    border-bottom: grey;/* blur settings */
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
     color: black;
 
     margin: auto;

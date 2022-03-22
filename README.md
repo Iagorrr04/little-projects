@@ -11,7 +11,7 @@
 
 ---
 
-## iClock 03.10.2022
+## iClock
 - A minimalist clock, getting started with JS.
 
 <div align="center" width=100%>
@@ -20,3 +20,15 @@
          
 </div>
 
+---
+
+## iFlix
+- A simple image viewer where you can add new images throught the input box.
+
+<div align="center" width=100%>
+
+    <img src="https://github.com/Iagorrr04/little-projects/blob/main/iPoster/demo.png">
+
+</div>
+
+---
