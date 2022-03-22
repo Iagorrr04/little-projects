@@ -27,7 +27,7 @@
 
 <div align="center" width=100%>
 
-    <img src="https://github.com/Iagorrr04/little-projects/blob/main/iPoster/demo.png">
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/iPoster/demo.png">
 
 </div>
 
