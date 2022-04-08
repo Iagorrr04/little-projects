@@ -16,7 +16,7 @@
 
 <div align="center" width=100%>
 
-<img src="https://raw.githubusercontent.com/Iagorrr04/little-projects/main/iClock/demo.png?token=GHSAT0AAAAAABSCSMMSSHN3CZDWPS5PS2C2YRQSZJQ">
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/iClock/demo.png">
          
 </div>
 
