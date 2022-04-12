@@ -32,3 +32,15 @@
 </div>
 
 ---
+
+## Compay Landing page
+- This project was devloped during the [#7daysofcode](https://7daysofcode.io/matricula/html-css) proposed by [Giovanna Moeller](https://github.com/giovannamoeller).
+- A good opportunity to learn more about flex-box model, you can find the original design here: [Figma](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?node-id=0%3A9878).
+
+<div align="center" width=100%>
+
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/7daysofcode/demo.png">
+
+</div>
+
+---
