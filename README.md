@@ -44,3 +44,15 @@
 </div>
 
 ---
+
+## Pricing panel
+- A panel price example that i used to learn more about responsive CSS and flexbox.
+- The original project can be found here: [codepen](https://codepen.io/travisw/pen/EvbKwd)
+
+<div align="center" width=100%>
+
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/pricingPanel/demo.png">
+
+</div>
+
+---
