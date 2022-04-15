@@ -1,0 +1,205 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+:root{
+    --soft-gray: rgb(221, 221, 221);
+    --hard-gray: rgb(82, 82, 82);
+    --main-blue: #5ba1f8;
+    --main-blue-darker: #2e70c0;
+    --soft-dark: rgb(23, 22, 29);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=========================================================================================================================================================================================================*/
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    box-sizing: border-box;
+
+    /* Which apply - time - function to define 'speed' */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--main-blue);
+
+    /* To view everything woooow */
+    min-height: 100vh
+
+}
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* To fit a distance between the content inside and the border. */
+    padding: 20px;
+
+
+    background-color: white;
+
+
+    border-radius: 15px;
+
+
+    max-width: 70%;
+    max-height: 70%;
+}
+
+
+.plan-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    background-color: white;
+
+    padding: 2em;
+}
+
+#middle-container{
+    border-left: var(--soft-gray) solid 2px;
+    border-right: var(--soft-gray) solid 2px;
+}
+.plan-container img{
+    max-width: 60%;
+}
+
+
+
+.plan-name{
+    letter-spacing: 1px;
+    font-weight: 500px;
+
+    font-size: large;
+
+    color: var(--hard-gray);
+
+
+    margin-top: 1em;
+    margin-bottom: 2.5em;
+
+
+}
+
+.plan-about{
+    font-size: 1em;
+
+    color: var(--main-blue-darker);
+
+    border-top: var(--soft-gray) solid 1px;
+
+    padding: 1em 0em;
+
+    text-align: center;
+}
+
+.plan-about:last-child{
+    border-bottom: var(--soft-gray) solid 1px;
+}
+
+.plan-price{
+    color: var(--main-blue-darker);
+
+    font-weight: bold;
+    font-size: 1.5em;
+
+    padding: 1em 0em;
+}
+
+.sign-plan{
+    color: var(--main-blue-darker);
+
+    background-color: white;
+
+    padding: 1em 2.5em;
+
+    border: var(--main-blue-darker) solid 1px;
+    border-radius: 15px;
+
+    margin-top: 1em;
+
+    /* Which apply - time - function to define 'speed' */
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+.sign-plan:hover{
+    color: white;
+
+    background-color: var(--main-blue-darker);
+
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* Responsive to mobile or other devices. */
+@media (max-width:800px){
+    .main-container{
+        flex-direction: column;
+
+        margin: 2em;
+    }
+
+    #middle-container{
+        border-left: none;
+        border-right: none;
+
+        border-top: var(--soft-gray) solid 1px;
+        border-bottom: var(--soft-gray) solid 1px;
+    }
+}
