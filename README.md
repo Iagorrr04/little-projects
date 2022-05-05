@@ -49,10 +49,17 @@
 - A panel price example that i used to learn more about responsive CSS and flexbox.
 - The original project can be found here: [codepen](https://codepen.io/travisw/pen/EvbKwd)
 
-<div align="center" width=100%>
+<div align="center" width="100%">
 
 <img src="https://github.com/Iagorrr04/little-projects/blob/main/pricingPanel/demo.png">
 
 </div>
 
 ---
+
+## Little Store
+- Another landing page to practice a responsive CSS, and also experiment other designs.
+
+<div align="center" width="100%">
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/little-store/images/demo.png">
+</div>
