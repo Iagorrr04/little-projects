@@ -63,3 +63,14 @@
 <div align="center" width="100%">
 <img src="https://github.com/Iagorrr04/little-projects/blob/main/little-store/images/demo.png">
 </div>
+
+---
+
+## Mini Portfolio
+- This page was devloped during the warming up week of #hiringcoders3 at the CSS module.
+
+<div align="center" width="100%">
+<img src="https://github.com/Iagorrr04/little-projects/blob/main/mini-portfolio/images/demo.png">
+</div>
+
+---
