@@ -1,0 +1,306 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+    font-family: 'Comfortaa', cursive;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*=====================================================================================================*/
+:root {
+    --dark-green-logo: #4d7340;
+    --soft-grey: rgb(199, 199, 199);
+}
+#top-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-logo-reader{
+    height: 60px;
+}
+
+#main-logo-title{
+    color: var(--dark-green-logo);
+
+    font-size: 2em;
+    font-weight: 1em;
+
+    margin: 0.5em;
+}
+
+#top-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 1em;
+}
+
+#top-navbar a {
+
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: black;
+
+    border-right: solid var(--dark-green-logo) 1px;
+    
+}
+
+#top-navbar a{
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#top-navbar a:hover {
+    text-decoration: underline;
+    color: var(--dark-green-logo);
+}
+
+#top-navbar a:nth-of-type(4){
+    border: none;
+}
+
+#img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("images/panel-image.jpg");
+    background-position: center;
+
+    height: 400px;
+
+    margin: auto;
+}
+
+#img-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 30%;
+
+    border: white 4px solid;
+    padding: 2em;
+}
+
+#img-container p{
+    color: white;
+    text-align: center;
+}
+
+#products-container{
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+}
+
+#products-container h1{
+    font-size: 2em;
+
+    padding: 0em 0.5em;
+
+    border-left: var(--dark-green-logo) solid  4px;
+
+    margin: 2em 0em;
+}
+
+#products-description-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 1.5em;
+}
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 1em;
+    margin: 0.5em;
+}
+
+.product-description img{
+    height: 15em;
+    border-radius: 1em;
+}
+
+.product-title{
+    margin: 1em 0em;
+
+    font-size: 1.2em;
+
+    color: var(--dark-green-logo);
+}
+
+.prodcut-text{
+    color: black;
+    font-size: medium;
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: var(--soft-grey); */
+    background-color: black;
+
+    padding: 1em;
+
+    color: white;
+}
+
+#external-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#external-links img{
+    margin:  1em;
+    max-height: 25px;
+}
+
+#contact-container{
+    display: flex;
+    flex-direction: column;
+
+    margin: 3em;
+}
+
+#contact-container h1{
+    font-size: 2em;
+
+    padding: 0em 0.5em;
+
+    border-left: var(--dark-green-logo) solid  4px;
+}
+
+#contact-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+    margin: 2em 2em 0.5em 2em;
+}
+
+.input-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-boxes input {
+    margin: 1em;
+    padding: 0.5em 1em;
+
+    border-radius: 15px;
+    border: black solid 1px;
+    width: 45%;
+
+}
+
+#contact-message {
+    margin: 1em;
+    padding: 0.5em 1em;
+
+    border-radius: 15px;
+    border: black solid 1px;
+}
+
+/* To creat little animation when hover an button */
+input[type=button]{
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#contact-submit{
+    height: 2em;
+    width: 8em;
+
+    align-self: center;
+
+    border-radius: 15px;
+    border: black solid 1px;
+
+    background-color: var(--dark-green-logo);
+    color: white;
+}
+
+#contact-submit:hover{
+    cursor: pointer;
+
+    transform: scale(1.2);
+}
+
+@media (max-width:850px){
+    #products-description-container{
+        flex-direction: column;
+    }
+}
