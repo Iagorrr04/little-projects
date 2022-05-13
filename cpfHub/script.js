@@ -94,3 +94,7 @@ function cpfValidation(cpf){
     return true;
 }
 
+// Function to generate and show the CPF.
+function generateCPF () {
+
+}

@@ -101,9 +101,10 @@ table {
 .validator-container h1 {
     color: var(--main-green);
     font-size: 3em;
+    margin-bottom: 0.5em;
 }
 .validator-container span {
-    color: var(--main-green);
+    color: white;
 
 }
 .validator-container span a {
@@ -157,3 +158,58 @@ table {
     color: var(--invalid-red);
 }
 
+.generate-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.generate-container h1 {
+    color: var(--main-green);
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.generate-container span {
+    color: white;
+}
+
+.generate-output {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.generate-output span{
+    text-align: center;
+    padding: 0.5em 4em;
+
+    background-color: var(--hard-gray);
+    
+    color: white;
+
+    border: white solid 2px;
+    border-radius: 15px;
+
+    margin: 1em;
+}
+
+.generate-output button{
+    background-color: var(--hard-gray);
+    
+    border: white solid 2px;
+    border-radius: 15px;
+
+    color: white;
+
+    padding: 0.5em 1em;
+    transition: scale 1s step-end;
+}
+
+.generate-output button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

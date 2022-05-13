@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CPF HUB</title>
 
     <!-- Link for CSS -->
     <link rel="stylesheet" href="style.css">
@@ -21,8 +21,8 @@
     </header>
 
     <main class="validator-container">
-        <h1>Validation</h1>
-        <span>Enter a CPF (only numbers), to verify if is valid or not following the <a href="https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/">standart rules</a>.</span>
+        <h1>Validate</h1>
+        <span>Enter a CPF , to verify if is valid or not following the <a href="https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/">standart rules</a>.</span>
         
         <div class="input-container">
             <input type="text" placeholder="XXX.XXX.XXX-XX" id="cpf-input">
@@ -32,6 +32,16 @@
         <span id="span-valid">Valid CPF !</span>
         <span id="span-invalid">Invalid CPF !</span>
 
+    </main>
+
+    <main class="generate-container">
+        <h1>Generate</h1>
+        <span>Simply click the button to generate a valid CPF.</span>
+
+        <div class="generate-output">
+            <span>XXX.XXX.XXX-XX</span>
+            <button onclick="generateCPF()">generate</button>
+        </div>
     </main>
 
     
