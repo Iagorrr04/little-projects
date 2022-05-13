@@ -1,0 +1,159 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+    font-family: 'Roboto Flex', 'sans-serif';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    height: 100vh;
+
+    background-color: var(--hard-gray);
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ================================================================================================== */
+:root {
+    --hard-dark: rgb(12, 12, 12);
+    --hard-gray: rgb(17, 17, 17);
+    --main-green: rgb(1, 169, 1);
+    --valid-green: rgb(17, 149, 17);
+    --invalid-red: rgb(166, 0, 0);
+}
+
+.header-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--hard-dark);
+
+    color: white;
+    
+
+    padding: 4em;
+}
+
+.header-container h1{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 4em;
+
+    color: var(--main-green);
+
+    
+    border: var(--main-green) solid 4px;
+    padding: 0.5em 1em;
+}
+
+.validator-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2em 1em 2em 1em;
+
+    background-color: var(--hard-gray)
+}
+
+.validator-container h1 {
+    color: var(--main-green);
+    font-size: 3em;
+}
+.validator-container span {
+    color: var(--main-green);
+
+}
+.validator-container span a {
+    color: rgb(2, 2, 192)
+}
+.validator-container input {
+    text-align: center;
+    padding: 0.5em 4em;
+
+    background-color: var(--hard-gray);
+    
+    color: white;
+
+    border: white solid 2px;
+    border-radius: 15px;
+
+    margin: 1em;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container button {
+    background-color: var(--hard-gray);
+    
+    border: white solid 2px;
+    border-radius: 15px;
+
+    color: white;
+
+    padding: 0.5em 1em;
+    transition: scale 1s step-end;
+}
+
+.input-container button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#span-valid {
+    display: none;
+    color: var(--valid-green);
+}
+
+#span-invalid {
+    display: none;
+    color: var(--invalid-red);
+}
+

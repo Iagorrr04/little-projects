@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link for CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <header class="header-container">
+        <h1>CPF HUB</h1>
+    </header>
+
+    <main class="validator-container">
+        <h1>Validation</h1>
+        <span>Enter a CPF (only numbers), to verify if is valid or not following the <a href="https://dicasdeprogramacao.com.br/algoritmo-para-validar-cpf/">standart rules</a>.</span>
+        
+        <div class="input-container">
+            <input type="text" placeholder="XXX.XXX.XXX-XX" id="cpf-input">
+            <button onclick="validation()">check</button>
+        </div>
+
+        <span id="span-valid">Valid CPF !</span>
+        <span id="span-invalid">Invalid CPF !</span>
+
+    </main>
+
+    
+    <!-- Link to our javaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
