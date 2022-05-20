@@ -52,8 +52,10 @@ function cpfValidation(cpf){
             console.log(i + " * " + numbers[10-i] + " = " + i*numbers[10-i]);
         }
         console.log("Multplication: " + multiplication);
-        multiplication = multiplication*10;
-
+        multiplication = (multiplication*10)%11;
+        if(multiplication == 10) {
+            multiplication = 0;
+        }
         var result = (multiplication%11) == digits[0];
         if(!result) {
             console.log("First digit is invalid.");
@@ -68,8 +70,11 @@ function cpfValidation(cpf){
             console.log(i + " * " + numbers[11-i] + " = " + (i*numbers[11-i]));
         }
         console.log("Multplication: " + multiplication);
-        multiplication = multiplication *10;
-        result = (multiplication % 11) == digits[1];
+        multiplication = (multiplication *10) % 11; 
+        if(multiplication == 10) {
+            multiplication = 0
+        }
+        result = multiplication == digits[1];
         if(!result) {
             console.log("Second digit is invalid.");
         }
@@ -96,5 +101,37 @@ function cpfValidation(cpf){
 
 // Function to generate and show the CPF.
 function generateCPF () {
+    console.log("Starting to generate the CPF");
+    let cpfGenerated = '';
+    for(let i = 0; i < 9; i++) {
+        // Add a number between 0 and 9 and add to the string.
+        let numberTemp = Math.floor(Math.random()*10);
+        cpfGenerated += numberTemp.toString();
+    }
+    console.log(`First step done ${cpfGenerated}.`);
+    
+    // Generate and add the first digit.
+    let fullMultiplication = 0;
+    for(let i = 0; i < 9; i++) {
+        fullMultiplication += parseInt(cpfGenerated[i]) * (10 - i)
+        console.log(`${parseInt(cpfGenerated[i])} * ${10-i} = ${(10-i)*parseInt(cpfGenerated[i])}`);
+    }
+    console.log(`The full multiplication is : ${fullMultiplication}`);
+    let rest = ((fullMultiplication*10)%11) == 10 ? '0' : ((fullMultiplication*10)%11).toString();
+    cpfGenerated += rest;
+    console.log(`First digit generated ${rest}, ${cpfGenerated}`);
 
+    // Generate and add the seccond digit.
+    fullMultiplication = 0;
+    for(let i = 0; i < 10; i++) {
+        fullMultiplication += parseInt(cpfGenerated[i] * (11-i));
+        console.log(`${parseInt(cpfGenerated[i])} * ${11-i} = ${(11-i)*parseInt(cpfGenerated[i])}`);
+    }
+    console.log(`The full multiplication is : ${fullMultiplication}`);
+    rest = ((fullMultiplication*10)%11) == 10 ? '0' : ((fullMultiplication*10)%11).toString();
+    cpfGenerated += rest;
+    console.log(`Second digit generated ${rest}, ${cpfGenerated}`);
+
+    let spanOutput = document.getElementById('cpf-generated-box');
+    spanOutput.innerHTML = cpfGenerated;
 }
