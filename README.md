@@ -74,3 +74,12 @@
 </div>
 
 ---
+
+## CPF hub
+- An useful page to generate and check the validity of a CPF, used to practice how JS interact with HTML again.
+
+<div align="center" width="100%">
+    <img src ="https://github.com/Iagorrr04/little-projects/blob/main/cpfHub/cpfHub_demo.png">
+</div>
+
+---
