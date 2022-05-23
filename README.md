@@ -83,3 +83,7 @@
 </div>
 
 ---
+
+## React Facts
+- Simple static page made using ReactJs, made to understand JSX, components, ReactDOM, the React project structure and many other things.
+- Devloped during the first project of [Learn React for free](https://scrimba.com/learn/learnreact), original design at [Figma](https://www.figma.com/file/xA1rJVQOorqMW6xjGdBLcI/ReactFacts?node-id=0%3A1).
