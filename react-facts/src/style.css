@@ -1,0 +1,74 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'sans-serif';
+}
+
+body {
+    height: 100vh;
+    background-color: var(--dark-background);
+}
+
+/* color variables */
+:root {
+    --darker-background: #21222A;
+    --react-blue: #61DAFB;
+    --dark-background: #282D35;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0em 1.5em;
+    background-color: var(--darker-background);
+}
+
+img {
+    margin-right: 10px;
+}
+
+
+.navbar--logo{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+
+
+    color: var(--react-blue);
+}
+
+#nav--title {
+    color: white;
+    font-size: 1em;
+}
+
+.content {
+    color: white;
+
+    padding: 2em 4em;
+
+    background-image: url('images/reactjs-icon\ 2.png');
+    background-repeat: no-repeat;
+    background-position: right; 
+    background-size: contain;
+}
+
+.content > h1 {
+    margin:  0 0 1em 0;
+    letter-spacing: 1px;
+}
+
+li {
+    padding: 10px 2em;
+    font-size: 20px;
+}
+
+/* To select the bullets */
+li::marker {
+    color: var(--react-blue);
+    font-size: 2rem;
+}
