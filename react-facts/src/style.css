@@ -55,6 +55,7 @@ img {
     background-repeat: no-repeat;
     background-position: right; 
     background-size: contain;
+    height: 80vh;
 }
 
 .content > h1 {
