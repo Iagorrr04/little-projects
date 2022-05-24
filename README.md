@@ -93,3 +93,6 @@
 </div>
 
 ---
+## Business Card
+- Static page to practice React concepts, solo project from [Learn React for Free](https://scrimba.com/learn/learnreact), original design at [Figma](https://www.figma.com/file/4ctPLUvIn5b5Ep6YPOZWWd/Digital-Business-Card?node-id=0%3A1).
+
