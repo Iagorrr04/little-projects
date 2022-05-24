@@ -1,0 +1,313 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+:root {
+    --soft-gray: rgb(221, 221, 221);
+    --hard-gray: rgb(82, 82, 82);
+    --main-blue: #5ba1f8;
+    --main-blue-darker: #2e70c0;
+    --soft-dark: rgb(23, 22, 29);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*========================================================================================================================================================*/
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23252c;
+    padding: 1em;
+    max-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    margin: 1em 2em;
+
+    background-color: #1A1B21;
+
+    border-radius: 10px;
+
+    font-family: 'Inter', 'sans-serif';
+
+    max-width: 280px;
+    min-width: 280px;
+}
+
+main>img {
+    max-width: 100%;
+    max-height: 280px;
+    /* object-fit: contain; */
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+
+.main--titles {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main--titles>h1 {
+    /* Iago Rocha */
+
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.main--titles>h2 {
+    /* Frontend student */
+
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #F3BF99;
+
+}
+
+.main--titles>h3 {
+    /* iagorrr.website */
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 150%;
+
+    color: #F5F5F5;
+}
+
+.main--emailbutton {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.4em 6em;
+    margin: 1em 2em 0em 2em;
+
+    gap: 8px;
+
+    background: white;
+
+    border: 1px solid #D1D5DB;
+
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+
+    /* Text */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    /* identical to box height, or 114% */
+
+    /* gray/700 */
+    color: #374151;
+}
+
+.main--emailbutton:hover {
+    cursor: pointer;
+}
+
+.main--emailbutton img {
+    width: 12px;
+}
+
+.main--about {
+    padding: 1.5em;
+}
+
+.main--about h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+
+    color: #F5F5F5;
+
+    margin: 5px 0px;
+}
+
+.main--about p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 150%;
+
+    /* or 15px */
+
+    color: #DCDCDC;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #161619;
+
+    width: 100%;
+    
+    gap: 1rem;
+
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer img {
+    max-height: 20px;
+    padding: 1em 0em;
+}
+
+
+
