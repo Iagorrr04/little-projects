@@ -16,7 +16,7 @@ function Card() {
 
             <div className="main--titles">
                 <h1>Iago Rocha</h1>
-                <h2>Frontend student</h2>
+                <h2>Full Stack student</h2>
                 <h3>iagorrr.website</h3>
             </div>
 
@@ -25,12 +25,12 @@ function Card() {
             <div className="main--about">
                 <h2>About</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus autem beatae tempore recusandae sint asperiores ipsum aliquam, quibusdam doloribus reiciendis quod ab.
+                    Undergraduate in Software Engineering, participating at #HiringCoders3 to become a full stack developer, technology enthusiastic.
                 </p>
 
                 <h2>Interests</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut magni minima consequuntur recusandae. Maxime aspernatur alias rerum corrupti.
+                    Technology in general, learn new stuff, metal music and guitar, mechanical keyboards, run a bit, some video games and of course coffee.
                 </p>
             </div>
 
