@@ -2,6 +2,7 @@ import React from "react";
 
 // Images.
 import AirbnbLogo from "../images/airbnb-logo.png"
+
 function Navbar() {
     return (
         <>

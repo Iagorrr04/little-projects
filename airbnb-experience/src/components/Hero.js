@@ -2,6 +2,7 @@ import React from "react";
 
 // Images
 import examples from "../images/examples.png"
+
 function Hero() {
     return (
         <div className="hero-container">

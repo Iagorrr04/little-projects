@@ -1,20 +1,38 @@
 import React from "react";
 
-import poolImage from "../images/poolImage.png"
 import starIcon from "../images/starIcon.png"
-function Card() {
+
+function Card(props) {
+    let badgeText;
+    if(props.openSpots === 0){
+        badgeText = "Sould out";
+    }
+    else if (props.location =="Online"){
+       badgeText = "Online";
+       console.log("online")
+    }
+    else{
+        badgeText = false;
+    }
     return (
         <div className="card">
-            <img src={poolImage} className="card--photo"/>
+            
+            <div>
+
+                {badgeText && <div className="card--badge">
+                    {badgeText}
+                </div>}
+                <img src={require(`../images/${props.coverImg}`)} className="card--photo"/> 
+            </div>
 
             <div className="card--stats">
                 <img src={starIcon} className="card--star"/>
-                <span>5.0 <span className="gray--text">(6) USA</span></span>
+                <span>{props.stats.rating} <span className="gray--text">({props.stats.reviewCount})-{props.location}</span></span>
             </div>
 
-            <span>Life lessons with Katie Zaferes</span>
+            <span>{props.title}</span>
             <br/>
-            <span><span className="bold">From $ 136<span/> / person</span></span>
+            <span><span className="bold">From $ {props.price}<span/> / person</span></span>
         </div>
     );
 }

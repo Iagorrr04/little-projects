@@ -5,4 +5,4 @@ import App from "./components/App";
     
 import style from "./style.css";
 
-ReactDOM.render(<App/>, document.querySelector("body"));
+ReactDOM.render(<App/>, document.getElementById("root"));

@@ -147,6 +147,7 @@ table {
 /*========================================================================================================================================================*/
 body {
     font-family: 'Poppins', 'sans-serif';
+
 }
 
 nav {
@@ -178,6 +179,7 @@ nav img {
     width: 50%;
     max-height: 400px;
     align-self: center;
+    object-fit: contain
 }
 
 .hero--text {
@@ -210,12 +212,30 @@ nav img {
 .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-items: center;
+    padding: 10px;
+    position: relative;
+}
+
+.card--badge {
+    position: absolute;
+    background-color: rgb(243, 243, 243);
+    color: black;
+
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+
+    
+
+
+    font-weight: 500;
 }
 
 .card--photo {
     max-width: 200px;
+    align-self: center;
+
+    margin-bottom: 10px;
 }
 
 .gray--text {
@@ -232,3 +252,12 @@ nav img {
 .card--star {
     max-height: 20px;
 }
+
+.experience--cards {
+    display: flex;
+    
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+
