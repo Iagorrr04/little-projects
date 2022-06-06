@@ -1,0 +1,274 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+:root {
+    --soft-gray: rgb(221, 221, 221);
+    --hard-gray: rgb(82, 82, 82);
+    --main-blue: #5ba1f8;
+    --main-blue-darker: #2e70c0;
+    --soft-dark: rgb(23, 22, 29);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*=================================================================================*/
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    font-family: 'Inter';
+
+    margin: 0%;
+
+    background-color: #F5F7FB;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #F55A5A;
+    color: white;
+
+    padding: 1em;
+
+}
+
+.navbar img{
+    height: 1.5em;
+    margin-right: 10px;
+}
+
+.navbar > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 100;
+}
+
+.journal-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    background-color: white;
+    margin: 0em 1em 0em 1em;
+    max-width: 600px;
+    height: 100vh;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    color: #2B283A;
+    padding: 0.5em  ;
+
+    border-bottom: 1px rgba(0, 0, 0, 0.203) solid;
+    max-width: 600px;
+}
+
+.placeImage {
+    /* position: absolute; */
+    width: 7em;
+    height: 10em;
+
+    border-radius: 5px;
+    object-fit: cover;
+    margin-right: 0.3em;
+}
+
+.cardLocation {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.cardDescription {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.cardLocation img {
+    max-height: 0.6em;
+    margin-right: 5px;
+}
+
+.cardLocation h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    /* font-size: 12px; */
+    font-size: 0.6em;
+    letter-spacing: 4px;
+
+    margin-right: 1em;
+}
+
+.cardLocation a{
+    color: #918E9B;
+    /* font-size: 10px; */
+    font-size: 0.6em;
+}
+
+.cardContainer h1 {
+    font-weight: 600;
+    font-size: 1em;
+    margin-top: 0.3em;
+    margin-bottom: 0.7em;
+}
+
+.cardContainer span {
+    font-weight: 600;
+    font-size: 0.7em;
+}
+
+.cardContainer p {
+    font-size: 0.65em;
+    text-align: left;
+}
+
+@media (min-width: 600px){
+    .journal-div {
+        margin: auto;
+    }
+}
