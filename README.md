@@ -109,3 +109,11 @@
 <div align="center" width="100%">
     <img src="https://github.com/Iagorrr04/little-projects/blob/main/airbnb-experience/airbnb-demo.png"/>
 </div>
+
+---
+## Travel Journal
+- A list some places and their respective description.
+- Solo project from [Learn React for Free](https://scrimba.com/learn/learnreact), reinforcing the concepts learned. [Original here](https://www.figma.com/file/VehaKyKmPqdTbZxKzP71KB/Travel-Journal-(Copy)?node-id=0%3A1.)
+<div align="center" width="100%">
+    <img src="https://github.com/Iagorrr04/little-projects/blob/main/travel-journal/travel-journal-demo.png"/>
+</div>
