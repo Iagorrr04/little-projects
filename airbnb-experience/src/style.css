@@ -1,0 +1,263 @@
+/* 
+    Standart stuff.
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+:root {
+    --soft-gray: rgb(221, 221, 221);
+    --hard-gray: rgb(82, 82, 82);
+    --main-blue: #5ba1f8;
+    --main-blue-darker: #2e70c0;
+    --soft-dark: rgb(23, 22, 29);
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*========================================================================================================================================================*/
+body {
+    font-family: 'Poppins', 'sans-serif';
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em 2em;
+
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.123);
+
+    color: #FF5A5F;
+}
+
+nav img {
+    max-width: 80px;
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2em 0em;
+}
+
+.hero-container img{
+    width: 50%;
+    max-height: 400px;
+    align-self: center;
+    object-fit: contain
+}
+
+.hero--text {
+    margin-top: 1.5em;
+}
+
+.hero--text h1{
+    /* Online Experiences */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 110%;
+
+    color: #000000;
+}
+
+.hero--text p {
+    /* Join unique interactive activities led by one-of-a-kind hosts—all without leaving home. */
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 110%;
+
+    color: #222222;
+
+    margin-top: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+}
+
+.card--badge {
+    position: absolute;
+    background-color: rgb(243, 243, 243);
+    color: black;
+
+    border-radius: 8px;
+    padding: 5px;
+    margin: 5px;
+
+    
+
+
+    font-weight: 500;
+}
+
+.card--photo {
+    max-width: 200px;
+    align-self: center;
+
+    margin-bottom: 10px;
+}
+
+.gray--text {
+    color: #918E9B;
+}
+
+
+.card--stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.card--star {
+    max-height: 20px;
+}
+
+.experience--cards {
+    display: flex;
+    
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+
